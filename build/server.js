@@ -637,7 +637,11 @@ logger_1.default.info(`Entity models ${safe_1.default.bold(Object.keys(models_1.
 let metricsUpdateLoop;
 const Metrics = metrics.observeMetrics(); // vuln-code-snippet neutral-line exposedMetricsChallenge
 const customizeEasterEgg = require('./lib/startup/customizeEasterEgg'); // vuln-code-snippet hide-line
-app.get('/metrics', metrics.serveMetrics()); // vuln-code-snippet vuln-line exposedMetricsChallenge
+
+// Fix it Exposed Metrics
+// app.get('/metrics', metrics.serveMetrics()); // vuln-code-snippet vuln-line exposedMetricsChallenge
+app.get('/metrics', security.isAdmin(), metrics.serveMetrics())
+
 errorhandler.title = `${config_1.default.get('application.name')} (Express ${utils.version('express')})`;
 const registerWebsocketEvents = require('./lib/startup/registerWebsocketEvents');
 const customizeApplication = require('./lib/startup/customizeApplication');
