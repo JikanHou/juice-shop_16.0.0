@@ -13,7 +13,10 @@ module.exports = function productReviews() {
     return (req, res, next) => {
         const user = security.authenticatedUsers.from(req); // vuln-code-snippet vuln-line forgedReviewChallenge
         db.reviews.update(// vuln-code-snippet neutral-line forgedReviewChallenge
-        { _id: req.body.id }, // vuln-code-snippet vuln-line noSqlReviewsChallenge forgedReviewChallenge
+        
+        // fix it forged Review
+        // { _id: req.body.id }, // vuln-code-snippet vuln-line noSqlReviewsChallenge forgedReviewChallenge
+        { _id: req.body.id, author: user.data.email },
         { $set: { message: req.body.message } }, { multi: true } // vuln-code-snippet vuln-line noSqlReviewsChallenge
         ).then((result) => {
             challengeUtils.solveIf(challenges.noSqlReviewsChallenge, () => { return result.modified > 1; }); // vuln-code-snippet hide-line
