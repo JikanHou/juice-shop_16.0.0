@@ -463,5 +463,6 @@
 	"Find the hidden <a href=\"https://en.wikipedia.org/wiki/Easter_egg_(media)\" target=\"_blank\">easter egg</a>.": "找到隐藏的 <a href=\"https://en.wikipedia.org/wiki/Easter_egg_(media)\" target=\"_blank\">复活节彩蛋</a>。",
 	"Try either a) a knowledgeable brute force attack or b) reverse engineering or c) some research in the cloud.": "尝试a) 基于已知信息的暴力破解或b) 逆向工程或c) 云中的一些研究。",
 	"Bypass a security control with a <a href=\"https://hakipedia.com/index.php/Poison_Null_Byte\">Poison Null Byte</a> to access a file not meant for your eyes.": "用 <a href=\"https://hakipedia.com/index.php/Poison_Null_Byte\">Poison Null Byte</a> 绕过安全控制来访问一个你看不着的文件。",
-	"Undoubtedly you want to read our security policy before conducting any research on our application.": "毫无疑问，在对我们的应用程序进行任何研究之前，您都希望阅读我们的安全政策。"
+	"Undoubtedly you want to read our security policy before conducting any research on our application.": "毫无疑问，在对我们的应用程序进行任何研究之前，您都希望阅读我们的安全政策。",
+	"What's your favorite place to go hiking?": "What's your favorite place to go hiking?"
 }

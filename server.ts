@@ -474,6 +474,8 @@ restoreOverwrittenFilesWithOriginals().then(() => {
         WalletModel.create({ UserId: context.instance.id }).catch((err: unknown) => {
           console.log(err)
         })
+        // fix it Admin Registration
+        context.instance.role = 'customer'
         return context.continue // vuln-code-snippet neutral-line registerAdminChallenge
       }) // vuln-code-snippet neutral-line registerAdminChallenge
     } // vuln-code-snippet neutral-line registerAdminChallenge
